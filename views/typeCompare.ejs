@@ -1,0 +1,36 @@
+<% include header %>
+
+<div id="aboutHeader">
+    <h2>Type Comparison Tool</h2>
+</div>
+<div class col-xs-4>
+<% if(rs.length > 0) { %>
+<form method="post" action="/typeComparison/result">
+    <label for="Type1">Your Pokemon</label>
+    <select id="Type1" name="Type1" class="form-control">
+        <% for (var i=0; rs.length > i; i++) { %>
+        <option value="<%= rs[i].TypeName %>">
+            <%= rs[i].TypeName %>
+        </option>
+        <% } %>
+    </select>
+    </br>
+    </br>
+    <label for="Type2">Opponent Pokemon</label>
+    <select id="Type2" name="Type2" class="form-control">
+        <% for (var i=0; rs.length > i; i++) { %>
+        <option value="<%= rs[i].TypeName %>">
+            <%= rs[i].TypeName %>
+        </option>
+        <% } %>
+    </select>
+    </br>
+    <button type="submit" class="btn btn-warning">Submit!</button>
+</form>
+    </div>
+
+<% } else { %>
+No users are entered into the database.
+<% } %>
+
+<% include footer %>

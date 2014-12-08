@@ -1,0 +1,21 @@
+<% include header %>
+
+<div id="aboutHeader">
+    <h2>Abilities</h2>
+</div>
+
+<% if(rs.length > 0) { %>
+<table class="table table-bordered table-striped">
+    <tr><th>Ability Name</th><th>Effect</th></tr>
+    <% for (var i=0; rs.length > i; i++) { %>
+    <tr>
+        <td><%= rs[i].AbilityName %></td>
+        <td><%= rs[i].Effect %></td>
+    </tr>
+    <% } %>
+</table>
+<% } else { %>
+No users are entered into the database.
+<% } %>
+
+<% include footer %>

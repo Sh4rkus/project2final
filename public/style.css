@@ -1,0 +1,121 @@
+table.login {
+    border:none;
+}
+
+@font-face{
+    font-family: pokefont;
+    src: url('Pokemon Solid.ttf') ;
+
+
+}
+@font-face{
+    font-family:champ;
+    src: url('Champagne & Limousines Bold.ttf');
+}
+
+.container .jumbotron {
+
+    background-image: url('http://coinarcade.files.wordpress.com/2013/08/006-charizard.jpg');
+    background-position: -300px -180px;
+    text-align: center;
+    font-family: pokefont;
+    color: white;
+    position: relative;
+}
+
+.container .jumbotron h2{
+    position: relative;
+    top:40px;
+    margin-top: 90px;
+}
+
+.container .jumbotron h1{
+    margin-top: -10px;
+}
+
+
+
+.pokeIMG{
+    margin-left: 45%;
+    margin-right: -45%;
+
+}
+
+.entry{
+    text-align: center;
+}
+
+.container .indexText{
+    text-align: center;
+    font-family: champ;
+    font-size: 20px;
+}
+
+
+#header {
+
+    color:white;
+    background-position: right center;
+    text-align:center;
+    padding:5px;
+}
+#header a{
+    color:white;
+}
+
+#aboutHeader {
+    text-align:center;
+    font-family: pokefont;
+
+}
+
+.aboutText{
+    font-family: champ;
+    text-align:center;
+    font-size: 20px;
+}
+
+#pokeName{
+    text-align: center;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:800px;
+    width:150px;
+    float:left;
+    padding:5px;
+}
+#section {
+    width:550px;
+    float:left;
+    padding:10px;
+    position: relative;
+}
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+    height: 60px;
+}
+#footer {
+    background-color:;
+    text-align:center;
+
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+#test{
+    display: inline-block;
+}
+
+#splashIMG{
+    position: absolute;
+}

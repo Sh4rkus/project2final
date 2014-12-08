@@ -1,0 +1,32 @@
+<% include header %>
+
+<form method="POST" action="/insertSuccess" role="form">
+    <table id="login">
+        <tr><td>Pokedex Number:</td>
+            <!-- name attribute must be provided for non ajax forms -->
+            <td><input type="pNum" id="pNum" name="pNum" /></td>
+        </tr>
+        <tr><td>Name:</td>
+            <td><input type="name" id="name" name="name" /></td>
+        </tr>
+        <tr><td>Entry:</td>
+            <td><input type="entry" id="entry" name="entry" /></td>
+        </tr>
+        <tr><td>Ability:</td>
+            <td><input type="ability" id="ability" name="ability" /></td>
+        </tr>
+        <tr><td>Hidden Ability:</td>
+            <td><input type="hability" id="hability" name="hability" /></td>
+        </tr>
+        <tr><td>GrowthRate:</td>
+            <td><input type="growthrate" id="growthrate" name="growthrate" /></td>
+        </tr>
+        <tr><td>Type Name:</td>
+            <td><input type="typename" id="typename" name="typename" /></td>
+        </tr>
+
+    </table>
+    <input type="submit">
+</form>
+
+<% include footer %>

@@ -1,0 +1,55 @@
+<% include header %>
+
+
+
+<h1 id = 'pokeName'>No.<%= rs[0].PokedexNumber %> <a href="http://pokemondb.net/pokedex/<%= rs[0].Name.toLowerCase() %>"><%=rs[0].Name%></a></h1>
+<div class = "pokeIMG">
+    <img src="http://www.angelfire.com/pa3/pokenest/pokemonpics/<%= rs[0].Name.toLowerCase() %>.gif"/>
+</div>
+<div class = "entry">
+    <h4>Entry</h4>
+    <%= rs[0].Entry %>
+</div>
+
+
+
+</br>
+
+
+
+
+
+</br>
+
+<table class="table table-bordered table-striped">
+    <tr><th>Ability</th> <th>Hidden Ability</th> <th>Growth Rate</th></tr>
+    <tr><td><%= rs[0].Ability %></td> <td><%= rs[0].HiddenAbility %></td><td><%= rs[0].GrowthRate %></td></tr>
+</table>
+
+</br>
+
+<h3>Base Stats   (The stats that list 1 for each row are still pulled from my database.)</h3>
+
+<table class="table table-bordered table-striped">
+    <tr><th>HP</th><th>Attack</th><th>Defense</th><th>Sp.Attack</th><th>Sp.Defense</th><th>Speed</th></tr>
+    <tr><td><%=rs[0].HP %></td><td><%=rs[0].Atk %></td><td><%= rs[0].Def%></td><td><%= rs[0].SpAtk%></td><td><%= rs[0].SpDef%></td><td><%= rs[0].Spd%></td></tr>
+</table>
+
+</br>
+
+<h3>Move Set (The move 'Placeholder' is also pulled from my database.)</h3>
+
+<% if(rs.length > 0) { %>
+<table class="table table-bordered table-striped">
+    <tr><th>Move Name</th></tr>
+    <% for (var i=0; rs.length > i; i++) { %>
+
+    <tr>
+        <td><%= rs[i].LearnsMove %></td>
+    </tr>
+    <% } %>
+</table>
+<% } else { %>
+No users are entered into the database.
+<% } %>
+<% include footer %>

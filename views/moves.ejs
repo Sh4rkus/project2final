@@ -1,0 +1,27 @@
+<% include header %>
+
+<div id="aboutHeader">
+    <h2>Move List</h2>
+</div>
+
+
+<% if(rs.length > 0) { %>
+<table class="table table-bordered table-striped">
+    <tr><th>Move Name</th><th>Description</th> <th>Power</th> <th>Accuracy</th> <th>Type</th> <th>Obtained By</th> <th>Category</th></tr>
+    <% for (var i=0; rs.length > i; i++) { %>
+    <tr>
+        <td><%= rs[i].MoveName %></td>
+        <td><%= rs[i].Description %></td>
+        <td><%= rs[i].Power %></td>
+        <td><%= rs[i].ACC%></td>
+        <td><%= rs[i].Type %></td>
+        <td><%= rs[i].ObtainedBy%></td>
+        <td><%= rs[i].Category %></td>
+    </tr>
+    <% } %>
+</table>
+<% } else { %>
+No users are entered into the database.
+<% } %>
+
+<% include footer %>

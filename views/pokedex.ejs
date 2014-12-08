@@ -1,0 +1,25 @@
+<% include header %>
+
+<div id="aboutHeader">
+    <h2>Pokedex</h2>
+</div>
+
+<% if(rs.length > 0) { %>
+<form method="post" action="/pokedex/result">
+    <label for="pokemonName">Choose your Pokemon: </label>
+    <select id="pokemonName" name="pokemonName" class="form-control">
+        <% for (var i=0; rs.length > i; i++) { %>
+        <option value="<%= rs[i].PokedexNumber %>">
+            <%= rs[i].Name %>
+        </option>
+        <% } %>
+    </select>
+    </br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<% } else { %>
+No Pokemon are entered into the database.
+<% } %>
+
+<% include footer %>

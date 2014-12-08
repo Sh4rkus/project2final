@@ -1,0 +1,42 @@
+<% include header %>
+
+<div id="aboutHeader">
+    <h2>Super Effective Table</h2>
+</div>
+
+<% if(rs.length > 0) { %>
+<table class="table table-bordered table-striped">
+    <tr><th>Type Name</th><th>Super Effective Against</th></tr>
+    <% for (var i=0; rs.length > i; i++) { %>
+    <tr>
+        <td><%= rs[i].TypeName %></td>
+        <td><%= rs[i].SE %></td>
+    </tr>
+    <% } %>
+</table>
+
+<table class="table table-bordered table-striped">
+    <tr><th>Type Name</th><th>Not Very Effective Against</th></tr>
+    <% for (var i=0; rs.length > i; i++) { %>
+    <tr>
+        <td><%= rs[i].TypeName %></td>
+        <td><%= rs[i].NVE %></td>
+    </tr>
+    <% } %>
+</table>
+
+
+<table class="table table-bordered table-striped">
+    <tr><th>Type Name</th><th>Doesn't Effect</th></tr>
+    <% for (var i=0; rs.length > i; i++) { %>
+    <tr>
+        <td><%= rs[i].dTypeName %></td>
+        <td><%= rs[i].DNE %></td>
+    </tr>
+    <% } %>
+</table>
+<% } else { %>
+No users are entered into the database.
+<% } %>
+
+<% include footer %>
